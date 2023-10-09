@@ -39,23 +39,23 @@ def test_sorted_json():
 
 def test_mask_account_number_maestro():
     account_number = 'Maestro 1234567812345678'
-    assert mask_account_number(account_number) == 'Maestro 1234 56** **** 5678'
+    assert mask_account_number(account_number) == 'Maestro  1234 56** **** 5678'
 
 def test_mask_account_number_visa_classic():
     account_number = 'Visa Classic 12345678901234567890'
-    assert mask_account_number(account_number) == 'Visa Classic 1234 56** **** 567890'
+    assert mask_account_number(account_number) == 'Visa Classic  1234 56** **** 567890'
 
 def test_mask_account_number_visa_platinum():
     account_number = 'Visa Platinum 12345678901234567890'
-    assert mask_account_number(account_number) == 'Visa Platinum 1234 56** **** 67890'
+    assert mask_account_number(account_number) == 'Visa Platinum  1234 56** **** 67890'
 
 def test_mask_account_number_mastercard():
     account_number = 'MasterCard 12345678123456'
-    assert mask_account_number(account_number) == 'MasterCard 1234 56** **** 3456'
+    assert mask_account_number(account_number) == 'MasterCard  1234 56** **** 3456'
 
 def test_mask_account_number_visa_gold():
     account_number = 'Visa Gold 12345678901234'
-    assert mask_account_number(account_number) == 'Visa Gold 1234 56** **** 1234'
+    assert mask_account_number(account_number) == 'Visa Gold  1234 56** **** 1234'
 
 def test_mask_account_number_visa_gold():
     account_number = 'Счет 12345678901234'

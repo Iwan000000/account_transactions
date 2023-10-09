@@ -1,10 +1,9 @@
-import json
-
 from utils.arrs import mask_account_number, sorted_json
 
 sorted = sorted_json()
 
 def main_(sorted):
+    """Основная функция"""
     for operation in sorted[:5]:
         date = operation['date'].split('T')[0]
         description = operation['description']
